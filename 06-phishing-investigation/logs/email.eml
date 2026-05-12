@@ -1,0 +1,24 @@
+From: "IT Support" <support@company-update.xyz>
+To: john.doe@yourcompany.com
+Subject: URGENT: Your password expires in 24 hours
+Date: Mon, 15 Mar 2024 14:30:00 +0000
+MIME-Version: 1.0
+Content-Type: text/html; charset=UTF-8
+Return-Path: <bounce@mail-server.ng>
+X-Originating-IP: [41.223.119.42]
+Authentication-Results: mx.yourcompany.com;
+	spf=fail smtp.mail=support@company-update.xyz;
+	dkim=fail header.d=company-update.xyz;
+Received: from mail-server.ng (41.223.119.42) by mx.yourcompany.com
+	with SMTP id abc123; Mon, 15 Mar 2024 14:30:00 +0000
+
+<html>
+<body>
+<p>Dear User,</p>
+<p>Your account password will <strong>expire in 24 hours</strong>.</p>
+<p>To avoid losing access to your account, please verify your credentials immediately:</p>
+<p><a href="https://secure-bank-login.xyz/verify?user=john.doe">Click Here to Verify</a></p>
+<p>If you do not verify, your account will be locked.</p>
+<p>IT Department</p>
+</body>
+</html>

