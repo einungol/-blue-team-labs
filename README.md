@@ -19,8 +19,9 @@ Each lab includes step-by-step guidance, sample logs, and analysis scripts.
 ## Quick Start
 
 ```bash
-# Clone or download this repository
-cd blue-team-labs
+# Clone this repository
+git clone https://github.com/einungol/-blue-team-labs.git
+cd -blue-team-labs
 
 # Start with Lab 01 - Brute Force
 cd 01-bruteforce
@@ -46,14 +47,9 @@ cd 01-bruteforce
 ## Tools Installation
 
 ```bash
-# Linux tools
-sudo apt install wireshark tshark grep awk
-
-# Python tools
-pip install volatility3 deepbluecli chainsaw
-
-# Docker (for Splunk)
-docker pull splunk/splunk:latest
+# Run the installation script
+chmod +x scripts/install-tools.sh
+./scripts/install-tools.sh
 ```
 
 ## Contributing
@@ -66,4 +62,4 @@ MIT
 
 ---
 
-**Start with:** [Lab 01 - Brute Force Attack](01-bruteforce/walkthrough.md)
+**Start with:** [Lab 01 - Brute Force Attack](01-bruteforce/README.md)
