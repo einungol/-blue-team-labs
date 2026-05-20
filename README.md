@@ -4,17 +4,7 @@
 
 ## Overview
 
-A beginner-friendly blue team training repository with 10 hands-on scenarios covering:
-- Brute Force Attack Analysis
-- Malware Analysis
-- Memory Forensics
-- Network Traffic Analysis
-- Privilege Escalation Investigation
-- Phishing Email Investigation
-- SIEM Analysis with Splunk
-- Network Forensics with Wireshark
-- Malware Sandbox Analysis
-- Incident Response Playbook
+A beginner-friendly blue team training repository with **14 hands-on scenarios** covering all aspects of blue team work.
 
 ## Difficulty: Beginner ⭐
 
@@ -23,15 +13,11 @@ Each lab includes step-by-step guidance, sample logs, and analysis scripts.
 ## Quick Start
 
 ```bash
-# Clone this repository
 git clone https://github.com/einungol/-blue-team-labs.git
 cd -blue-team-labs
-
-# Start with Lab 01 - Brute Force
-cd 01-bruteforce
 ```
 
-## Lab Structure
+## Lab Structure (14 Labs)
 
 | Lab | Topic | Tools |
 |-----|-------|-------|
@@ -45,20 +31,10 @@ cd 01-bruteforce
 | 08 | Network Forensics | Wireshark, tshark |
 | 09 | Malware Sandbox | ANY.RUN, VirusTotal |
 | 10 | Incident Response | Playbook, Documentation |
-
-## Prerequisites
-
-- WSL2 or Linux VM (for Linux-based tools)
-- Windows VM (for Windows Event Logs)
-- Docker (optional - for Splunk/ELK)
-
-## Tools Installation
-
-```bash
-# Run the installation script
-chmod +x scripts/install-tools.sh
-./scripts/install-tools.sh
-```
+| 11 | Threat Hunting | MITRE ATT&CK, Sigma |
+| 12 | Cloud Security | AWS CloudTrail |
+| 13 | YARA Rules | YARA, String analysis |
+| 14 | Detection Engineering | Sigma, SIEM |
 
 ## Recommended Books
 
@@ -67,6 +43,15 @@ chmod +x scripts/install-tools.sh
 | Jump-start Your SOC Analyst Career | Best for beginners |
 | SOC Analyst Fundamentals | Hands-on SIEM skills |
 | Blue Team Handbook: Incident Response | DFIR guide |
+| CompTIA Security+ SY0-601 | Certification prep |
+
+## How to Use
+
+1. **Start with Lab 01** - Work through each lab in order
+2. **Try first without solution** - Use the hints
+3. **Check solution** - Compare with your findings
+4. **Document** - Write your own analysis report
+5. **Share** - Add to your portfolio
 
 ## Contributing
 
@@ -79,4 +64,3 @@ MIT
 ---
 
 **Start with:** [Lab 01 - Brute Force Attack](01-bruteforce/README.md)
-**Latest:** [Lab 10 - Incident Response](10-incident-response/README.md)
