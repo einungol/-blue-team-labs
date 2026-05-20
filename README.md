@@ -4,13 +4,17 @@
 
 ## Overview
 
-A beginner-friendly blue team training repository with 6 hands-on scenarios covering:
+A beginner-friendly blue team training repository with 10 hands-on scenarios covering:
 - Brute Force Attack Analysis
 - Malware Analysis
 - Memory Forensics
 - Network Traffic Analysis
 - Privilege Escalation Investigation
 - Phishing Email Investigation
+- SIEM Analysis with Splunk
+- Network Forensics with Wireshark
+- Malware Sandbox Analysis
+- Incident Response Playbook
 
 ## Difficulty: Beginner ⭐
 
@@ -36,7 +40,11 @@ cd 01-bruteforce
 | 03 | Memory Forensics | Volatility, Rekall |
 | 04 | Network Analysis | Wireshark, Zeek |
 | 05 | Privilege Escalation | Linux logs, LINPEAS |
-| 06 | Phishing Investigation | Email headers, URLs |
+| 06 | Phishing Investigation | Email headers, URL scan |
+| 07 | SIEM Analysis | Splunk, SPL |
+| 08 | Network Forensics | Wireshark, tshark |
+| 09 | Malware Sandbox | ANY.RUN, VirusTotal |
+| 10 | Incident Response | Playbook, Documentation |
 
 ## Prerequisites
 
@@ -52,6 +60,14 @@ chmod +x scripts/install-tools.sh
 ./scripts/install-tools.sh
 ```
 
+## Recommended Books
+
+| Book | Description |
+|------|-------------|
+| Jump-start Your SOC Analyst Career | Best for beginners |
+| SOC Analyst Fundamentals | Hands-on SIEM skills |
+| Blue Team Handbook: Incident Response | DFIR guide |
+
 ## Contributing
 
 PRs welcome! Add new scenarios or improve existing walkthroughs.
@@ -63,3 +79,4 @@ MIT
 ---
 
 **Start with:** [Lab 01 - Brute Force Attack](01-bruteforce/README.md)
+**Latest:** [Lab 10 - Incident Response](10-incident-response/README.md)
