@@ -4,6 +4,23 @@
 **Tools:** Sigma, Splunk, QRadar  
 **Time:** 40 minutes
 
+## Prerequisites
+
+### Knowledge Required
+- Basic understanding of SIEM and log analysis
+- Familiarity with common attack techniques (MITRE ATT&CK)
+- Basic knowledge of detection rules
+
+### Tools Needed
+- [Sigma Rules](https://github.com/SigmaHQ/sigma) - Detection rule format
+- [Sigma CLI](https://github.com/SigmaHQ/sigma-specs) - Rule validation
+- [Splunk Free](https://www.splunk.com/en_us/download/splunk-free.html) or [Elastic SIEM](https://www.elastic.co/security/siem)
+- Text editor (VS Code recommended)
+
+### Pre-Reading (Optional)
+- [Sigma Rules Documentation](https://sigma-specifications.readthedocs.io/)
+- [MITRE ATT&CK Detection Notes](https://attack.mitre.org/resources/working-with-attack/)
+
 ## Scenario
 
 You need to create detection rules for common attack techniques using Sigma format.

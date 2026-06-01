@@ -1,0 +1,28 @@
+{
+  "pcap_file": "capture.pcap",
+  "capture_time": "2024-03-19T14:15:00Z",
+  "source": "Workstation WS-HR-03",
+  "duration": "30 minutes",
+  "protocol_hierarchy": {
+    "TCP": 8500,
+    "HTTP": 3200,
+    "DNS": 1800,
+    "HTTPS": 1200,
+    "Other": 400
+  },
+  "top_talkers": [
+    {"ip": "192.168.1.45", "packets": 5200, "bytes": "45MB"},
+    {"ip": "10.0.0.1", "packets": 3100, "bytes": "12MB"},
+    {"ip": "185.234.219.10", "packets": 800, "bytes": "52MB"}
+  ],
+  "cleartext_credentials": [
+    {"protocol": "FTP", "user": "admin", "pass": "P@ssw0rd123"},
+    {"protocol": "HTTP Basic", "user": "john", "pass": "secret123"}
+  ],
+  "suspicious_domains": ["malware-c2.xyz", "data-exfil.net"],
+  "issues": {
+    "high_traffic_protocol": "BitTorrent",
+    "plaintext_creds": true,
+    "suspicious_connection": "185.234.219.10 (known malware C2)"
+  }
+}

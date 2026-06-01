@@ -1,0 +1,39 @@
+[
+  {
+    "eventTime": "2024-03-20T09:15:22.000Z",
+    "eventName": "CreateBucket",
+    "userIdentity": {"userName": "admin", "type": "IAMUser"},
+    "requestParameters": {"bucketName": "sensitive-data-backup"},
+    "sourceIPAddress": "203.0.113.50",
+    "eventType": "AwsApiCall",
+    "recipientAccountId": "123456789012"
+  },
+  {
+    "eventTime": "2024-03-20T09:16:45.000Z",
+    "eventName": "PutBucketPolicy",
+    "userIdentity": {"userName": "admin", "type": "IAMUser"},
+    "requestParameters": {"bucketName": "sensitive-data-backup"},
+    "requestParameters": {
+      "bucketPolicy": "{\"Version\":\"2012-10-17\",\"Statement\":[{\"Effect\":\"Allow\",\"Principal\":\"*\",\"Action\":\"s3:*\",\"Resource\":\"arn:aws:s3:::sensitive-data-backup/*\"}]}"
+    },
+    "sourceIPAddress": "203.0.113.50",
+    "eventType": "AwsApiCall"
+  },
+  {
+    "eventTime": "2024-03-20T09:18:10.000Z",
+    "eventName": "PutObject",
+    "userIdentity": {"userName": "admin", "type": "IAMUser"},
+    "requestParameters": {"bucketName": "sensitive-data-backup", "key": "backup/customer_db_2024.sql"},
+    "sourceIPAddress": "203.0.113.50",
+    "eventType": "AwsApiCall"
+  },
+  {
+    "eventTime": "2024-03-20T09:20:00.000Z",
+    "eventName": "GetBucketPolicy",
+    "userIdentity": {"userName": "attacker", "type": "IAMUser"},
+    "requestParameters": {"bucketName": "sensitive-data-backup"},
+    "sourceIPAddress": "185.234.219.10",
+    "eventType": "AwsApiCall",
+    "errorCode": "AccessDenied"
+  }
+]

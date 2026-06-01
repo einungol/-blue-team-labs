@@ -4,6 +4,21 @@
 **Tools:** Wireshark, tshark  
 **Time:** 40 minutes
 
+## Prerequisites
+
+### Knowledge Required
+- TCP/IP fundamentals
+- Understanding of HTTP, DNS, FTP protocols
+- Basic Wireshark usage
+
+### Tools Needed
+- [Wireshark](https://www.wireshark.org) - Network protocol analyzer
+- [tshark](https://www.wireshark.org/docs/man-pages/tshark.html) - Command-line packet capture
+
+### Pre-Reading (Optional)
+- [Wireshark Display Filters](https://www.wireshark.org/docs/man-pages/wireshark-filter.html)
+- [Network Forensics with Wireshark](https://www.sans.org/reading-room/whitepapers/tactical/digital-forensics-incident-response-scenarios-network-traffic-analysis-202)
+
 ## Scenario
 
 A user reported slow network performance. A packet capture was taken from their workstation. Analyze to find the issue.

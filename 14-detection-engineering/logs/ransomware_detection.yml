@@ -1,0 +1,67 @@
+title: Ransomware Detection - Suspicious File Encryption
+id: 3c4c4e89-8a9b-4c5d-9e2f-1a2b3c4d5e6f
+status: experimental
+description: Detects suspicious file encryption activity indicative of ransomware
+author: Blue Team Labs
+date: 2024-03-20
+references:
+  - https://attack.miteT1066 - Impact
+tags:
+  - attack.impact
+  - attack.t1486
+logsource:
+  category: file_delete
+  product: windows
+detection:
+  selection:
+    TargetFilename|endswith:
+      - '.encrypted'
+      - '.locked'
+      - '.ransom'
+      - '.crypto'
+  condition: selection
+level: critical
+falsepositives:
+  - Disk cleanup utilities
+  - Encryption utilities
+recommendation:
+  - Isolate host immediately
+  - Check for process injection
+  - Review backup availability
+
+---
+# Additional Sigma Rules for Lab 14
+
+title: PowerShell Encoded Command Execution
+id: 4d5e5f9a-9b0c-4d6e-8f1a-2b3c4d5e6f
+status: stable
+description: Detects encoded PowerShell commands often used by attackers
+author: Blue Team Labs
+date: 2024-03-20
+logsource:
+  category: process_creation
+  product: windows
+detection:
+  selection:
+    CommandLine|contains: '-enc '
+    CommandLine|contains: '-encodedcommand'
+  condition: selection
+level: medium
+
+title: Suspicious DNS Query to Known Malware Domain
+id: 5e6f7a8b-0c1d-4e6f-8a9b-0c1d2e3f4a5b
+status: experimental
+description: Detects DNS queries to known malware C2 domains
+author: Blue Team Labs
+date: 2024-03-20
+logsource:
+  category: dns_query
+  product: windows
+detection:
+  selection:
+    query|contains:
+      - 'malware-c2.xyz'
+      - 'data-exfil.net'
+      - 'ransomware-c2.io'
+  condition: selection
+level: high

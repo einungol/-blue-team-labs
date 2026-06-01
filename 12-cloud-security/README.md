@@ -4,6 +4,23 @@
 **Tools:** AWS Console, CloudTrail, GuardDuty  
 **Time:** 40 minutes
 
+## Prerequisites
+
+### Knowledge Required
+- Basic AWS services (EC2, S3, IAM)
+- Understanding of cloud security concepts
+- Familiarity with API logging and auditing
+
+### Tools Needed
+- [AWS Free Tier Account](https://aws.amazon.com/free/) - For hands-on practice
+- [AWS CloudTrail](https://aws.amazon.com/cloudtrail/) - API activity logging
+- [AWS GuardDuty](https://aws.amazon.com/guardduty/) - Threat detection
+- AWS Console access
+
+### Pre-Reading (Optional)
+- [AWS Security Best Practices](https://docs.aws.amazon.com/whitepapers/latest/aws-security-best-practices/)
+- [CloudTrail Documentation](https://docs.aws.amazon.com/cloudtrail/)
+
 ## Scenario
 
 A company uses AWS. You notice unusual API activity in CloudTrail. Investigate.

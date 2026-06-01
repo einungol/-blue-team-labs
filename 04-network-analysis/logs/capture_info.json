@@ -1,0 +1,20 @@
+{
+  "pcap_file": "capture.pcap",
+  "capture_time": "2024-03-19T10:30:00Z",
+  "duration": "15 minutes",
+  "capture_source": "192.168.1.50 (Firewall Mirror Port)",
+  "total_packets": 15420,
+  "protocols": ["DNS", "HTTP", "HTTPS", "TCP", "UDP", "SMB"],
+  "suspicious_indicators": {
+    "dns_queries": ["malware-c2.xyz", "suspicious-domain.info"],
+    "non_standard_ports": ["4444", "5555", "6666"],
+    "large_transfers": ["192.168.1.50 -> 185.234.219.10 (50MB)"],
+    "beaconing_detected": true
+  },
+  "analysis_questions": {
+    "protocol_abuse": "Check for non-HTTP on port 80/443",
+    "c2_communication": "Look for periodic beaconing patterns",
+    "data_exfiltration": "Large uploads to unknown IPs",
+    "malicious_domains": "DNS queries to suspicious TLDs"
+  }
+}

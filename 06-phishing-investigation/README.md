@@ -4,6 +4,23 @@
 **Tools:** Email headers, URL scan, VirusTotal  
 **Time:** 30 minutes
 
+## Prerequisites
+
+### Knowledge Required
+- Understanding of email protocols (SMTP, POP3, IMAP)
+- Familiarity with email header format
+- Basic knowledge of phishing attack techniques
+
+### Tools Needed
+- [VirusTotal](https://www.virustotal.com) - Domain/file reputation check
+- [URLScan.io](https://urlscan.io) - URL analysis
+- [Email Header Analyzer](https://mailanalysis.org) - Header parsing tool
+- Text editor
+
+### Pre-Reading (Optional)
+- [How to Analyze Email Headers](https://www.proofpoint.com/us/blog-email-security/how-analyze-email-headers)
+- [Phishing Email Indicators](https://www.csoonline.com/article/411593/phishing-email-detection-cheat-sheet.html)
+
 ## Scenario
 
 A user reported a suspicious email. Analyze to determine:

@@ -4,6 +4,22 @@
 **Tools:** Documentation, Playbook Template  
 **Time:** 30 minutes
 
+## Prerequisites
+
+### Knowledge Required
+- Understanding of NIST Incident Response framework
+- Familiarity with incident lifecycle (Detect, Contain, Eradicate, Recover)
+- Basic knowledge of phishing attacks
+
+### Tools Needed
+- Text editor (VS Code, Notepad++, etc.)
+- [INCIDENT_TEMPLATE.md](INCIDENT_TEMPLATE.md) - Provided template
+- Optional: [TheHive](https://thehive-project.org) - Case management (for advanced)
+
+### Pre-Reading (Optional)
+- [NIST SP 800-61](https://csrc.nist.gov/publications/detail/sp/800-61/rev-2/final) - Incident Response Guide
+- [SANS IR Poster](https://www.sans.org/security-resources/posters/incident-response/)
+
 ## Scenario
 
 Your company experienced a phishing attack. Several users clicked a malicious link. Create an incident response playbook.

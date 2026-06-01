@@ -4,6 +4,23 @@
 **Tools:** Volatility3, Rekall, WinPmem  
 **Time:** 45 minutes
 
+## Prerequisites
+
+### Knowledge Required
+- Basic understanding of OS memory architecture
+- Familiarity with Windows processes and services
+- Understanding of rootkits and DKOM (Direct Kernel Object Manipulation)
+
+### Tools Needed
+- [Volatility 3](https://github.com/volatilityfoundation/volatility3) - Memory forensics framework
+- [WinPmem](https://github.com/evitan03/Redline) - Memory acquisition tool
+- 4GB+ RAM recommended
+- Linux/macOS/Windows with Python 3.8+
+
+### Pre-Reading (Optional)
+- [Volatility 3 Documentation](https://volatility3.readthedocs.io/)
+- [Memory Forensics Basics](https://forensics.xeus.nl/)
+
 ## Scenario
 
 A workstation was suspected of being compromised. A memory dump was captured. Analyze to find:

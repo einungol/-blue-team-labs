@@ -1,0 +1,60 @@
+{
+  "incident_id": "INC-2024-0318-001",
+  "title": "Phishing Campaign - Multiple Users Clicked Malicious Link",
+  "status": "Open",
+  "severity": "Medium",
+  "created": "2024-03-18T09:15:00Z",
+  "lead": "SOC Analyst",
+  "timeline": [
+    {
+      "timestamp": "2024-03-18T09:15:00Z",
+      "event": "First user reported suspicious email"
+    },
+    {
+      "timestamp": "2024-03-18T09:30:00Z",
+      "event": "Email removed from all mailboxes"
+    },
+    {
+      "timestamp": "2024-03-18T09:45:00Z",
+      "event": "Affected users identified: 5 users clicked link"
+    },
+    {
+      "timestamp": "2024-03-18T10:00:00Z",
+      "event": "Malicious URL blocked at proxy"
+    },
+    {
+      "timestamp": "2024-03-18T10:30:00Z",
+      "event": "Endpoint scan initiated"
+    }
+  ],
+  "indicators": {
+    "sender": "security@company-update[.]xyz",
+    "subject": "Urgent: Password Expiry Notice",
+    "malicious_url": "https://company-update[.]xyz/login",
+    "redirect_url": "https://attacker-c2[.]io/creds"
+  },
+  "affected_systems": [
+    "5 Windows workstations",
+    "Active Directory"
+  ],
+  "containment_actions": [
+    "Email removed from Exchange",
+    "URL blocked in Web Proxy",
+    "Affected users logged out of all sessions",
+    "Password reset for affected users"
+  ],
+  "eradication_actions": [
+    "Full endpoint scan completed",
+    "No malware detected",
+    "Credentials compromised - password reset completed"
+  ],
+  "recovery_actions": [
+    "Monitor affected accounts for 30 days",
+    "User security awareness training scheduled"
+  ],
+  "lessons_learned": [
+    "Need better email filtering",
+    "User training on phishing recognition needed",
+    "Consider implementing MFA immediately"
+  ]
+}

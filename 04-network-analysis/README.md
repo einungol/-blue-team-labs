@@ -4,6 +4,22 @@
 **Tools:** Wireshark, Zeek, tshark  
 **Time:** 40 minutes
 
+## Prerequisites
+
+### Knowledge Required
+- Basic understanding of TCP/IP, UDP, DNS, HTTP/HTTPS
+- Familiarity with packet capture concepts
+- Understanding of network protocols
+
+### Tools Needed
+- [Wireshark](https://www.wireshark.org) - Network protocol analyzer
+- [Zeek](https://zeek.org) - Network security monitor (optional)
+- [tshark](https://www.wireshark.org/docs/man-pages/tshark.html) - Command-line Wireshark
+
+### Pre-Reading (Optional)
+- [Wireshark Tutorial for Beginners](https://www.wireshark.org/docs/)
+- [Network Forensics Basics](https://www.sans.org/reading-room/whitepapers/forensics/memory-forensics-techniques-detecting-rootkits-210)
+
 ## Scenario
 
 A network capture shows suspicious activity. Analyze to identify:

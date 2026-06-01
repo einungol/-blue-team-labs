@@ -4,9 +4,9 @@
 
 ## Overview
 
-A beginner-friendly blue team training repository with **14 hands-on scenarios** covering all aspects of blue team work.
+A beginner-friendly blue team training repository with **19 hands-on scenarios** covering all aspects of blue team work.
 
-## Difficulty: Beginner ⭐
+## Difficulty: Beginner ⭐ to Intermediate ⭐⭐
 
 Each lab includes step-by-step guidance, sample logs, and analysis scripts.
 
@@ -17,24 +17,29 @@ git clone https://github.com/einungol/-blue-team-labs.git
 cd -blue-team-labs
 ```
 
-## Lab Structure (14 Labs)
+## Lab Structure (19 Labs)
 
-| Lab | Topic | Tools |
-|-----|-------|-------|
-| 01 | Brute Force Attack | Windows Event Logs, Chainsaw |
-| 02 | Malware Analysis | ANY.RUN, Hybrid Analysis |
-| 03 | Memory Forensics | Volatility, Rekall |
-| 04 | Network Analysis | Wireshark, Zeek |
-| 05 | Privilege Escalation | Linux logs, LINPEAS |
-| 06 | Phishing Investigation | Email headers, URL scan |
-| 07 | SIEM Analysis | Splunk, SPL |
-| 08 | Network Forensics | Wireshark, tshark |
-| 09 | Malware Sandbox | ANY.RUN, VirusTotal |
-| 10 | Incident Response | Playbook, Documentation |
-| 11 | Threat Hunting | MITRE ATT&CK, Sigma |
-| 12 | Cloud Security | AWS CloudTrail |
-| 13 | YARA Rules | YARA, String analysis |
-| 14 | Detection Engineering | Sigma, SIEM |
+| Lab | Topic | Tools | Difficulty |
+|-----|-------|-------|------------|
+| 01 | Brute Force Attack | Windows Event Logs, Chainsaw | ⭐ |
+| 02 | Malware Analysis | ANY.RUN, Hybrid Analysis | ⭐ |
+| 03 | Memory Forensics | Volatility, Rekall | ⭐ |
+| 04 | Network Analysis | Wireshark, Zeek | ⭐ |
+| 05 | Privilege Escalation | Linux logs, LINPEAS | ⭐ |
+| 06 | Phishing Investigation | Email headers, URL scan | ⭐ |
+| 07 | SIEM Analysis | Splunk, SPL | ⭐ |
+| 08 | Network Forensics | Wireshark, tshark | ⭐ |
+| 09 | Malware Sandbox | ANY.RUN, VirusTotal | ⭐ |
+| 10 | Incident Response | Playbook, Documentation | ⭐ |
+| 11 | Threat Hunting | MITRE ATT&CK, Sigma | ⭐ |
+| 12 | Cloud Security | AWS CloudTrail | ⭐ |
+| 13 | YARA Rules | YARA, String analysis | ⭐ |
+| 14 | Detection Engineering | Sigma, SIEM | ⭐ |
+| 15 | Home Lab Setup | VirtualBox, Splunk | ⭐ |
+| 16 | Active Directory Security | BloodHound, Event Logs | ⭐⭐ |
+| 17 | Syslog Management | rsyslog, ELK | ⭐ |
+| 18 | Phishing Document Analysis | olevba, peepdf | ⭐⭐ |
+| 19 | SOC Automation (SOAR) | n8n, Shuffle | ⭐⭐ |
 
 ## Recommended Books
 

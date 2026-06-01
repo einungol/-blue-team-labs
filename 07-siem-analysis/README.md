@@ -4,6 +4,22 @@
 **Tools:** Splunk, Search Processing Language (SPL)  
 **Time:** 45 minutes
 
+## Prerequisites
+
+### Knowledge Required
+- Basic understanding of SIEM concepts
+- Familiarity with log types and formats
+- Basic search/query language knowledge
+
+### Tools Needed
+- [Splunk Free](https://www.splunk.com/en_us/download/splunk-free.html) - SIEM platform
+- [Splunk Docs](https://docs.splunk.com/Documentation/Splunk) - Reference
+- Web browser
+
+### Pre-Reading (Optional)
+- [Splunk Search Tutorial](https://docs.splunk.com/Documentation/Splunk/latest/SearchTutorial/Aboutsearches)
+- [SPL Quick Reference](https://docs.splunk.com/Documentation/Splunk/latest/SearchReference/QuickReference)
+
 ## Scenario
 
 A SOC analyst received an alert about suspicious login activity. Your task is to investigate using SIEM logs.

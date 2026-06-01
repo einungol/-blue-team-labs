@@ -4,6 +4,22 @@
 **Tools:** Windows Event Logs, Chainsaw, grep  
 **Time:** 30 minutes
 
+## Prerequisites
+
+### Knowledge Required
+- Basic understanding of Windows Event Logs
+- Familiarity with RDP (Remote Desktop Protocol)
+- Understanding of authentication concepts (logon types)
+
+### Tools Needed
+- [Chainsaw](https://github.com/WithSecureLabs/chainsaw) - For EVTX analysis
+- [DeepBlueCLI](https://github.com/sans-blue-team/DeepBlueCLI) - Alternative EVTX parser
+- PowerShell 5.1+ or Windows Terminal
+
+### Pre-Reading (Optional)
+- [Microsoft Event ID 4625](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4625) - Failed logon
+- [Microsoft Event ID 4624](https://learn.microsoft.com/en-us/windows/security/threat-protection/auditing/event-4624) - Successful logon
+
 ## Scenario
 
 A Windows server was compromised via RDP brute force attack. Your task is to analyze the security logs and answer:

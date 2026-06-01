@@ -4,6 +4,22 @@
 **Tools:** MITRE ATT&CK, Sigma Rules, YARA  
 **Time:** 45 minutes
 
+## Prerequisites
+
+### Knowledge Required
+- Understanding of MITRE ATT&CK framework
+- Familiarity with kill chain and attack stages
+- Basic SIEM and log analysis concepts
+
+### Tools Needed
+- [MITRE ATT&CK Navigator](https://mitre-attack.github.io/attack-navigator/) - Threat hunting visualization
+- [Sigma Rules](https://github.com/SigmaHQ/sigma) - Detection rules
+- [Atomic Red Team](https://github.com/redcanaryco/atomic-red-team) - Adversary emulation
+
+### Pre-Reading (Optional)
+- [MITRE ATT&CK Overview](https://attack.mitre.org/resources/getting-started/)
+- [Threat Hunting Fundamentals](https://www.sans.org/reading-room/whitepapers/analyst/mind-you-threat-hunting-406)
+
 ## Scenario
 
 You are a Threat Hunter. Your SIEM has detected some anomalies. Use MITRE ATT&CK framework to investigate.

