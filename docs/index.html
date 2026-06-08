@@ -1,0 +1,603 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Blue Team Labs - Cybersecurity Practice</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        :root {
+            --primary: #00d4aa;
+            --secondary: #1a1a2e;
+            --bg: #0f0f1a;
+            --card-bg: #16162a;
+            --text: #e0e0e0;
+            --text-muted: #888;
+        }
+
+        body {
+            font-family: 'Segoe UI', system-ui, sans-serif;
+            background: var(--bg);
+            color: var(--text);
+            line-height: 1.6;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Hero Section */
+        header {
+            padding: 80px 0;
+            text-align: center;
+            background: linear-gradient(135deg, var(--secondary) 0%, var(--bg) 100%);
+            border-bottom: 1px solid #2a2a4a;
+        }
+
+        h1 {
+            font-size: 3.5rem;
+            margin-bottom: 20px;
+            background: linear-gradient(90deg, var(--primary), #00ff88);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .tagline {
+            font-size: 1.3rem;
+            color: var(--text-muted);
+            margin-bottom: 30px;
+        }
+
+        .cta-button {
+            display: inline-block;
+            padding: 15px 40px;
+            background: var(--primary);
+            color: var(--bg);
+            text-decoration: none;
+            border-radius: 8px;
+            font-weight: bold;
+            font-size: 1.1rem;
+            transition: all 0.3s ease;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 10px 30px rgba(0, 212, 170, 0.3);
+        }
+
+        /* Stats */
+        .stats {
+            display: flex;
+            justify-content: center;
+            gap: 50px;
+            padding: 40px 0;
+            flex-wrap: wrap;
+        }
+
+        .stat {
+            text-align: center;
+        }
+
+        .stat-number {
+            font-size: 2.5rem;
+            font-weight: bold;
+            color: var(--primary);
+        }
+
+        .stat-label {
+            color: var(--text-muted);
+        }
+
+        /* Labs Section */
+        .section {
+            padding: 60px 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2rem;
+            margin-bottom: 40px;
+        }
+
+        .labs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 25px;
+        }
+
+        .lab-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 25px;
+            border: 1px solid #2a2a4a;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            color: inherit;
+        }
+
+        .lab-card:hover {
+            border-color: var(--primary);
+            transform: translateY(-5px);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+        }
+
+        .lab-number {
+            font-size: 0.9rem;
+            color: var(--primary);
+            font-weight: bold;
+            margin-bottom: 10px;
+        }
+
+        .lab-title {
+            font-size: 1.3rem;
+            margin-bottom: 10px;
+        }
+
+        .lab-description {
+            color: var(--text-muted);
+            font-size: 0.95rem;
+            margin-bottom: 15px;
+        }
+
+        .lab-tags {
+            display: flex;
+            gap: 8px;
+            flex-wrap: wrap;
+        }
+
+        .tag {
+            background: #2a2a4a;
+            padding: 4px 12px;
+            border-radius: 20px;
+            font-size: 0.8rem;
+            color: var(--text-muted);
+        }
+
+        .difficulty {
+            display: flex;
+            gap: 3px;
+        }
+
+        .difficulty .star {
+            color: var(--primary);
+        }
+
+        .difficulty .star.empty {
+            color: #444;
+        }
+
+        /* Resources Section */
+        .resources-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+        }
+
+        .resource-card {
+            background: var(--card-bg);
+            border-radius: 12px;
+            padding: 30px;
+            border: 1px solid #2a2a4a;
+        }
+
+        .resource-card h3 {
+            margin-bottom: 15px;
+            color: var(--primary);
+        }
+
+        .resource-card ul {
+            list-style: none;
+        }
+
+        .resource-card li {
+            padding: 8px 0;
+            border-bottom: 1px solid #2a2a4a;
+        }
+
+        .resource-card li:last-child {
+            border-bottom: none;
+        }
+
+        .resource-card a {
+            color: var(--text);
+            text-decoration: none;
+        }
+
+        .resource-card a:hover {
+            color: var(--primary);
+        }
+
+        /* Footer */
+        footer {
+            background: var(--secondary);
+            padding: 40px 0;
+            text-align: center;
+            margin-top: 60px;
+            border-top: 1px solid #2a2a4a;
+        }
+
+        .footer-links {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 20px;
+        }
+
+        .footer-links a {
+            color: var(--text-muted);
+            text-decoration: none;
+        }
+
+        .footer-links a:hover {
+            color: var(--primary);
+        }
+
+        .copyright {
+            color: var(--text-muted);
+            font-size: 0.9rem;
+        }
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2.5rem;
+            }
+
+            .stats {
+                gap: 30px;
+            }
+
+            .labs-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <div class="container">
+            <h1>Blue Team Labs 🎯</h1>
+            <p class="tagline">Hands-on cybersecurity practice for Blue Team skills</p>
+            <a href="https://github.com/einungol/-blue-team-labs" class="cta-button">
+                View on GitHub
+            </a>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="stats">
+            <div class="stat">
+                <div class="stat-number">19</div>
+                <div class="stat-label">Labs</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">14+</div>
+                <div class="stat-label">Tools Covered</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">Beginner</div>
+                <div class="stat-label">Difficulty</div>
+            </div>
+            <div class="stat">
+                <div class="stat-number">Free</div>
+                <div class="stat-label">Open Source</div>
+            </div>
+        </div>
+    </div>
+
+    <section class="section">
+        <div class="container">
+            <h2 class="section-title">All Labs</h2>
+            <div class="labs-grid">
+                <a href="01-bruteforce/README.html" class="lab-card">
+                    <div class="lab-number">Lab 01</div>
+                    <div class="lab-title">Brute Force Attack Analysis</div>
+                    <div class="lab-description">Analyze Windows Event Logs to identify RDP brute force attacks</div>
+                    <div class="difficulty">
+                        <span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                    </div>
+                    <div class="lab-tags">
+                        <span class="tag">Windows Logs</span>
+                        <span class="tag">Chainsaw</span>
+                    </div>
+                </a>
+
+                <a href="02-malware-analysis/README.html" class="lab-card">
+                    <div class="lab-number">Lab 02</div>
+                    <div class="lab-title">Malware Analysis</div>
+                    <div class="lab-description">Analyze malware samples using sandbox tools and extract IOCs</div>
+                    <div class="difficulty">
+                        <span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                    </div>
+                    <div class="lab-tags">
+                        <span class="tag">ANY.RUN</span>
+                        <span class="tag">IOCs</span>
+                    </div>
+                </a>
+
+                <a href="03-memory-forensics/README.html" class="lab-card">
+                    <div class="lab-number">Lab 03</div>
+                    <div class="lab-title">Memory Forensics</div>
+                    <div class="lab-description">Extract artifacts and detect threats from memory dumps</div>
+                    <div class="difficulty">
+                        <span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                    </div>
+                    <div class="lab-tags">
+                        <span class="tag">Volatility</span>
+                        <span class="tag">Memory</span>
+                    </div>
+                </a>
+
+                <a href="04-network-analysis/README.html" class="lab-card">
+                    <div class="lab-number">Lab 04</div>
+                    <div class="lab-title">Network Traffic Analysis</div>
+                    <div class="lab-description">Analyze PCAP files to identify suspicious network activity</div>
+                    <div class="difficulty">
+                        <span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                    </div>
+                    <div class="lab-tags">
+                        <span class="tag">Wireshark</span>
+                        <span class="tag">PCAP</span>
+                    </div>
+                </a>
+
+                <a href="05-privilege-escalation/README.html" class="lab-card">
+                    <div class="lab-number">Lab 05</div>
+                    <div class="lab-title">Privilege Escalation</div>
+                    <div class="lab-description">Investigate Linux privilege escalation from bash history and logs</div>
+                    <div class="difficulty">
+                        <span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                    </div>
+                    <div class="lab-tags">
+                        <span class="tag">Linux</span>
+                        <span class="tag">LINPEAS</span>
+                    </div>
+                </a>
+
+                <a href="06-phishing-investigation/README.html" class="lab-card">
+                    <div class="lab-number">Lab 06</div>
+                    <div class="lab-title">Phishing Investigation</div>
+                    <div class="lab-description">Analyze suspicious emails and extract phishing indicators</div>
+                    <div class="difficulty">
+                        <span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                    </div>
+                    <div class="lab-tags">
+                        <span class="tag">Email</span>
+                        <span class="tag">Headers</span>
+                    </div>
+                </a>
+
+                <a href="07-siem-analysis/README.html" class="lab-card">
+                    <div class="lab-number">Lab 07</div>
+                    <div class="lab-title">SIEM Analysis</div>
+                    <div class="lab-description">Write Splunk queries to detect security events</div>
+                    <div class="difficulty">
+                        <span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                    </div>
+                    <div class="lab-tags">
+                        <span class="tag">Splunk</span>
+                        <span class="tag">SPL</span>
+                    </div>
+                </a>
+
+                <a href="08-network-forensics/README.html" class="lab-card">
+                    <div class="lab-number">Lab 08</div>
+                    <div class="lab-title">Network Forensics</div>
+                    <div class="lab-description">Investigate network anomalies and detect C2 communication</div>
+                    <div class="difficulty">
+                        <span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                    </div>
+                    <div class="lab-tags">
+                        <span class="tag">Wireshark</span>
+                        <span class="tag">Forensics</span>
+                    </div>
+                </a>
+
+                <a href="09-malware-analysis/README.html" class="lab-card">
+                    <div class="lab-number">Lab 09</div>
+                    <div class="lab-title">Malware Sandbox</div>
+                    <div class="lab-description">Dynamic malware analysis using online sandboxes</div>
+                    <div class="difficulty">
+                        <span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                    </div>
+                    <div class="lab-tags">
+                        <span class="tag">ANY.RUN</span>
+                        <span class="tag">Dynamic</span>
+                    </div>
+                </a>
+
+                <a href="10-incident-response/README.html" class="lab-card">
+                    <div class="lab-number">Lab 10</div>
+                    <div class="lab-title">Incident Response</div>
+                    <div class="lab-description">Create incident response playbooks for common scenarios</div>
+                    <div class="difficulty">
+                        <span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                    </div>
+                    <div class="lab-tags">
+                        <span class="tag">IR</span>
+                        <span class="tag">Playbook</span>
+                    </div>
+                </a>
+
+                <a href="11-threat-hunting/README.html" class="lab-card">
+                    <div class="lab-number">Lab 11</div>
+                    <div class="lab-title">Threat Hunting</div>
+                    <div class="lab-description">Hunt for threats using MITRE ATT&CK framework</div>
+                    <div class="difficulty">
+                        <span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                    </div>
+                    <div class="lab-tags">
+                        <span class="tag">MITRE</span>
+                        <span class="tag">Hunting</span>
+                    </div>
+                </a>
+
+                <a href="12-cloud-security/README.html" class="lab-card">
+                    <div class="lab-number">Lab 12</div>
+                    <div class="lab-title">Cloud Security (AWS)</div>
+                    <div class="lab-description">Analyze AWS CloudTrail logs for suspicious activity</div>
+                    <div class="difficulty">
+                        <span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                    </div>
+                    <div class="lab-tags">
+                        <span class="tag">AWS</span>
+                        <span class="tag">CloudTrail</span>
+                    </div>
+                </a>
+
+                <a href="13-yara-rules/README.html" class="lab-card">
+                    <div class="lab-number">Lab 13</div>
+                    <div class="lab-title">YARA Rules</div>
+                    <div class="lab-description">Create YARA rules for malware detection</div>
+                    <div class="difficulty">
+                        <span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                    </div>
+                    <div class="lab-tags">
+                        <span class="tag">YARA</span>
+                        <span class="tag">Detection</span>
+                    </div>
+                </a>
+
+                <a href="14-detection-engineering/README.html" class="lab-card">
+                    <div class="lab-number">Lab 14</div>
+                    <div class="lab-title">Detection Engineering</div>
+                    <div class="lab-description">Write Sigma rules for SIEM detection</div>
+                    <div class="difficulty">
+                        <span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                    </div>
+                    <div class="lab-tags">
+                        <span class="tag">Sigma</span>
+                        <span class="tag">SIEM</span>
+                    </div>
+                </a>
+
+                <a href="15-home-lab-setup/README.html" class="lab-card">
+                    <div class="lab-number">Lab 15</div>
+                    <div class="lab-title">Home Lab Setup</div>
+                    <div class="lab-description">Set up your own security lab for practice</div>
+                    <div class="difficulty">
+                        <span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                    </div>
+                    <div class="lab-tags">
+                        <span class="tag">VirtualBox</span>
+                        <span class="tag">Splunk</span>
+                    </div>
+                </a>
+
+                <a href="16-active-directory-security/README.html" class="lab-card">
+                    <div class="lab-number">Lab 16</div>
+                    <div class="lab-title">Active Directory Security</div>
+                    <div class="lab-description">Detect AD attacks and privilege escalation</div>
+                    <div class="difficulty">
+                        <span class="star">★</span><span class="star">★</span><span class="star empty">★</span>
+                    </div>
+                    <div class="lab-tags">
+                        <span class="tag">AD</span>
+                        <span class="tag">BloodHound</span>
+                    </div>
+                </a>
+
+                <a href="17-syslog-management/README.html" class="lab-card">
+                    <div class="lab-number">Lab 17</div>
+                    <div class="lab-title">Syslog Management</div>
+                    <div class="lab-description">Set up centralized log management with rsyslog</div>
+                    <div class="difficulty">
+                        <span class="star">★</span><span class="star empty">★</span><span class="star empty">★</span>
+                    </div>
+                    <div class="lab-tags">
+                        <span class="tag">rsyslog</span>
+                        <span class="tag">ELK</span>
+                    </div>
+                </a>
+
+                <a href="18-phishing-document-analysis/README.html" class="lab-card">
+                    <div class="lab-number">Lab 18</div>
+                    <div class="lab-title">Phishing Document Analysis</div>
+                    <div class="lab-description">Analyze malicious Office documents and macros</div>
+                    <div class="difficulty">
+                        <span class="star">★</span><span class="star">★</span><span class="star empty">★</span>
+                    </div>
+                    <div class="lab-tags">
+                        <span class="tag">olevba</span>
+                        <span class="tag">Macros</span>
+                    </div>
+                </a>
+
+                <a href="19-soc-automation/README.html" class="lab-card">
+                    <div class="lab-number">Lab 19</div>
+                    <div class="lab-title">SOC Automation (SOAR)</div>
+                    <div class="lab-description">Build automation workflows for alert triage</div>
+                    <div class="difficulty">
+                        <span class="star">★</span><span class="star">★</span><span class="star empty">★</span>
+                    </div>
+                    <div class="lab-tags">
+                        <span class="tag">n8n</span>
+                        <span class="tag">SOAR</span>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section class="section" style="background: var(--secondary);">
+        <div class="container">
+            <h2 class="section-title">Resources</h2>
+            <div class="resources-grid">
+                <div class="resource-card">
+                    <h3>Career Resources</h3>
+                    <ul>
+                        <li><a href="../CAREER-PATH.html">Career Path Guide</a></li>
+                        <li><a href="https://www.linkedin.com/in/einungol">LinkedIn Profile</a></li>
+                        <li><a href="https://tryhackme.com">TryHackMe</a></li>
+                        <li><a href="https://www.hackthebox.com">HackTheBox</a></li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <h3>Case Studies</h3>
+                    <ul>
+                        <li><a href="../CASE-STUDY-01-Ransomware.html">Ransomware Incident</a></li>
+                        <li><a href="#">More coming soon...</a></li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <h3>Tools</h3>
+                    <ul>
+                        <li><a href="https://www.wireshark.org">Wireshark</a></li>
+                        <li><a href="https://www.splunk.com">Splunk</a></li>
+                        <li><a href="https://any.run">ANY.RUN</a></li>
+                        <li><a href="https://github.com/SigmaHQ/sigma">Sigma Rules</a></li>
+                    </ul>
+                </div>
+                <div class="resource-card">
+                    <h3>Certifications</h3>
+                    <ul>
+                        <li><a href="https://www.comptia.org/certifications/security">CompTIA Security+</a></li>
+                        <li><a href="https://www.comptia.org/certifications/cybersecurity-analyst">CompTIA CySA+</a></li>
+                        <li><a href="https://www.elearnsecurity.com/our-courses/penetration-testing/ejpt-evasion-techniques-and-detection-methods">eJPT</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-links">
+                <a href="https://github.com/einungol/-blue-team-labs">GitHub</a>
+                <a href="https://github.com/einungol/-blue-team-labs/stargazers">Stars</a>
+                <a href="https://github.com/einungol/-blue-team-labs/issues">Issues</a>
+                <a href="https://linkedin.com/in/einungol">LinkedIn</a>
+            </div>
+            <p class="copyright">Blue Team Labs © 2024 - Built for learning and practice</p>
+        </div>
+    </footer>
+</body>
+</html>
